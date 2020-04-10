@@ -1,10 +1,15 @@
 const https = require("https");
+// replace [Pune] to the city's weather which you want to show using the Bot
+let city = "Pune";
+// You can change [metric] to whatever you like to(as of now it returns Temperature in Celsius, read OpenWeather API Docs to know more.)
+let units = "metric";
+// Please add your own API Key below || Example: let appid = "YOUR_API_KEY"
+let appid = "";
 
 https.get(
   {
     hostname: "api.openweathermap.org",
-    path:
-      "/data/2.5/weather?q=pune&units=metric&appid=c891401213ef73c16b634270d608f050",
+    path: `/data/2.5/weather?q=${city}&units=${units}&appid=${appid}`,
   },
   function (res) {
     res.setEncoding("utf8");
