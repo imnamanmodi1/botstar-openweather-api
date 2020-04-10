@@ -4,7 +4,7 @@ let city = "Pune";
 // You can change [metric] to whatever you like to(as of now it returns Temperature in Celsius, read OpenWeather API Docs to know more.)
 let units = "metric";
 // Please add your own API Key below || Example: let appid = "YOUR_API_KEY"
-let appid = "";
+let appid = "c891401213ef73c16b634270d608f050";
 
 https.get(
   {
@@ -23,7 +23,7 @@ https.get(
         // console.log(parsedData.main.temp.toString());
         let cityTemp = parsedData.main.temp.toString();
         let response = {
-          text: "The Current Temperature in Pune is " + cityTemp + "°C",
+          text: "The Current Temperature in " + city + ` is ${cityTemp} °C`,
         };
         // console.log(response);
         render(response);
