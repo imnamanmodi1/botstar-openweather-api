@@ -4,7 +4,7 @@ let city = "Pune";
 // You can change [metric] to whatever you like to(as of now it returns Temperature in Celsius, read OpenWeather API Docs to know more.)
 let units = "metric";
 // Please add your own API Key below || Example: let appid = "YOUR_API_KEY"
-let appid = "c891401213ef73c16b634270d608f050";
+let appid = "";
 
 https.get(
   {
